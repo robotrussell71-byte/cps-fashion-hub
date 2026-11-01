@@ -1,87 +1,346 @@
+
 <!DOCTYPE html>
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>C.P.S Fashion Hub</title>
+<meta name="description" content="C.P.S Fashion Hub - Premium fashion collection for boys and men. Shop stylish clothes at affordable prices.">
+<meta name="theme-color" content="#101010">
+<title>C.P.S Fashion Hub | Premium Fashion</title>
+
 <style>
-body{margin:0;font-family:Arial;background:#f5f5f5;color:#222}
-header{background:#111;color:white;text-align:center;padding:22px}
-h1{margin:0}.hero{text-align:center;background:#222;color:white;padding:55px 15px}
-.hero h2{font-size:34px}
-.btn,.order{display:inline-block;background:#25D366;color:white;padding:13px 20px;border-radius:8px;text-decoration:none;font-weight:bold}
-section{max-width:900px;margin:auto;padding:35px 15px}
-h2{text-align:center}
-.products{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-.card{background:white;padding:22px;text-align:center;border-radius:12px;box-shadow:0 2px 10px #ccc}
-.icon{font-size:50px}
-.order{padding:10px}
-.about{background:white;padding:25px;border-radius:12px;text-align:center}
-.contact{background:#111;color:white;text-align:center;max-width:none}
-@media(max-width:500px){.products{grid-template-columns:1fr}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#f7f6f2;
+ color:#171717;
+}
+header{
+ background:#101010;
+ color:white;
+ padding:18px 15px;
+ text-align:center;
+ border-bottom:2px solid #c5a45b;
+}
+.logo{
+ font-size:25px;
+ font-weight:900;
+ letter-spacing:1px;
+}
+.logo span{color:#d7b76a}
+header p{
+ margin:7px 0 0;
+ color:#d7b76a;
+ font-size:12px;
+ letter-spacing:3px;
+}
+nav{
+ background:#191919;
+ display:flex;
+ justify-content:center;
+ gap:25px;
+ padding:13px 8px;
+ flex-wrap:wrap;
+}
+nav a{
+ color:white;
+ text-decoration:none;
+ font-size:13px;
+ font-weight:bold;
+}
+nav a:hover{color:#d7b76a}
+.hero{
+ background:linear-gradient(135deg,#101010,#29251d,#111);
+ color:white;
+ text-align:center;
+ padding:65px 15px;
+ border-bottom:4px solid #c5a45b;
+}
+.tag{
+ color:#d7b76a;
+ letter-spacing:4px;
+ font-size:11px;
+ font-weight:bold;
+}
+.hero h1{
+ font-size:clamp(30px,7vw,48px);
+ margin:16px 0 10px;
+ line-height:1.2;
+}
+.hero h1 span{color:#d7b76a}
+.hero p{
+ color:#ddd;
+ font-size:15px;
+ line-height:1.7;
+}
+.btn{
+ display:inline-block;
+ background:#d7b76a;
+ color:#151515;
+ text-decoration:none;
+ padding:14px 23px;
+ border-radius:5px;
+ font-weight:bold;
+ margin-top:15px;
+}
+.btn:hover{background:#f0d58f}
+.features{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:8px;
+ max-width:950px;
+ margin:-1px auto 0;
+ padding:20px 10px;
+ background:#fff;
+ text-align:center;
+}
+.feature{
+ font-size:12px;
+ font-weight:bold;
+ color:#333;
+}
+.feature span{
+ display:block;
+ font-size:23px;
+ margin-bottom:7px;
+}
+section{
+ max-width:1100px;
+ margin:auto;
+ padding:40px 15px;
+}
+.section-title{text-align:center;margin-bottom:28px}
+.section-title small{
+ color:#ad873b;
+ font-weight:bold;
+ letter-spacing:3px;
+}
+.section-title h2{
+ font-size:27px;
+ margin:9px 0;
+}
+.section-title p{color:#777;font-size:13px}
+.products{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:13px;
+}
+.card{
+ background:white;
+ border:1px solid #e8e4dc;
+ border-radius:9px;
+ overflow:hidden;
+ box-shadow:0 4px 15px rgba(0,0,0,.06);
+ transition:transform .2s;
+}
+.card:hover{transform:translateY(-4px)}
+.photo{
+ background:#f0efeb;
+ width:100%;
+ aspect-ratio:1/1;
+ overflow:hidden;
+}
+.photo img{
+ width:100%;
+ height:100%;
+ object-fit:contain;
+ display:block;
+}
+.details{padding:12px 10px 14px}
+.details h3{
+ font-size:14px;
+ margin:3px 0 8px;
+}
+.details p{
+ font-size:12px;
+ color:#777;
+ margin:0 0 10px;
+}
+.price{
+ font-size:19px;
+ font-weight:900;
+ color:#a77e30;
+ margin-bottom:12px;
+}
+.order{
+ display:block;
+ background:#171717;
+ color:#d7b76a;
+ text-decoration:none;
+ text-align:center;
+ padding:11px 5px;
+ border-radius:5px;
+ font-size:12px;
+ font-weight:bold;
+}
+.order:hover{background:#d7b76a;color:#111}
+.about{
+ background:#171717;
+ color:white;
+ text-align:center;
+ border-radius:10px;
+ padding:30px 20px;
+}
+.about h2{color:#d7b76a}
+.about p{
+ color:#ddd;
+ line-height:1.9;
+ font-size:14px;
+}
+.contact{
+ background:#101010;
+ color:white;
+ max-width:none;
+ text-align:center;
+ border-top:3px solid #c5a45b;
+}
+.contact h2{color:#d7b76a}
+.contact p{font-size:14px;line-height:1.8}
+.contact .btn{margin-bottom:10px}
+footer{
+ background:#080808;
+ color:#aaa;
+ text-align:center;
+ padding:18px 10px;
+ font-size:12px;
+}
+footer span{color:#d7b76a}
+.whatsapp-float{
+ position:fixed;
+ right:15px;
+ bottom:18px;
+ z-index:10;
+ background:#25D366;
+ color:white;
+ text-decoration:none;
+ padding:13px 16px;
+ border-radius:30px;
+ font-weight:bold;
+ box-shadow:0 4px 12px #0004;
+ font-size:13px;
+}
+@media(min-width:700px){
+ .products{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+ .details{padding:17px}
+ .details h3{font-size:17px}
+ .details p{font-size:14px}
+ .order{font-size:14px}
+ .photo{aspect-ratio:1/1}
+}
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>🛍️ C.P.S Fashion Hub</h1>
-<p>Fashion • Style • Quality</p>
+ <div class="logo">C.P.S <span>FASHION HUB</span></div>
+ <p>CLASSIC • PREMIUM • STYLE</p>
 </header>
 
-<div class="hero">
-<h2>आपके हर Style के लिए</h2>
-<p>All कपड़े एक ही जगह</p>
-<a class="btn" href="https://wa.me/919693036797?text=Namaste%20C.P.S%20Fashion%20Hub%2C%20mujhe%20kapdon%20ki%20jaankari%20chahiye." target="_blank">💬 WhatsApp पर Order करें</a>
+<nav>
+ <a href="#home">HOME</a>
+ <a href="#collection">COLLECTION</a>
+ <a href="#about">ABOUT</a>
+ <a href="#contact">CONTACT</a>
+</nav>
+
+<div class="hero" id="home">
+ <div class="tag">WELCOME TO OUR FASHION WORLD</div>
+ <h1>अपना Style बनाएं<br><span>सबसे खास!</span></h1>
+ <p>Premium Fashion • Latest Collection • Best Style</p>
+ <p>आपके पसंदीदा कपड़े अब एक ही जगह।</p>
+ <a class="btn" href="https://wa.me/919693036797?text=Namaste%20C.P.S%20Fashion%20Hub%2C%20mujhe%20kapdon%20ki%20jaankari%20chahiye." target="_blank">✦ SHOP NOW</a>
 </div>
 
-<section>
-<h2>हमारी Collection</h2>
-<div class="products">
-
-<div class="card">
-<img src="file_0000000036408211980322d122d080c5.png" style="width:100%;max-width:300px;border-radius:10px;">
-<h3>Boy's Oversize T-Shirt</h3>
-<p>Stylish Boy's Oversize T-Shirt — ₹329</p>
-<a class="order" href="https://wa.me/919693036797?text=Mujhe%20Boy%27s%20Oversize%20T-Shirt%20%E2%82%B9329%20chahiye." target="_blank">WhatsApp Order</a>
+<div class="features">
+ <div class="feature"><span>✦</span>Premium Style</div>
+ <div class="feature"><span>♛</span>Quality Fashion</div>
+ <div class="feature"><span>✓</span>Easy WhatsApp Order</div>
 </div>
 
-<div class="card">
-<img src="IMG_20260614_173915.JPG" style="width:100%;max-width:300px;border-radius:10px;">
-<h3>Boy's Shirt</h3>
-<p>Stylish Boy's Shirt — ₹349</p>
-<a class="order" href="https://wa.me/919693036797?text=Namaste%2C%20mujhe%20Boy%27s%20Shirt%20%E2%82%B9349%20chahiye." target="_blank">WhatsApp Order</a>
-</div>
+<section id="collection">
+ <div class="section-title">
+  <small>OUR COLLECTION</small>
+  <h2>Latest Fashion</h2>
+  <p>अपनी पसंद का Style चुनें</p>
+ </div>
 
-<div class="card">
-<img src="file_00000000f90071fdb7630b1fe6214ca4.png" style="width:100%;max-width:300px;border-radius:10px;">
-<h3>Boy's Jeans</h3>
-<p>Stylish Boy's Jeans — ₹299</p>
-<a class="order" href="https://wa.me/919693036797?text=Namaste%2C%20mujhe%20Boy%27s%20Jeans%20%E2%82%B9299%20chahiye." target="_blank">WhatsApp Order</a>
-</div>
+ <div class="products">
 
-<div class="card">
-<img src="file_0000000038748211890152864962459d.png" style="width:100%;max-width:300px;border-radius:10px;">
-<h3>Woman Saree</h3>
-<p>Beautiful Woman Saree — ₹599</p>
-<a class="order" href="https://wa.me/919693036797?text=Namaste%2C%20mujhe%20Woman%20Saree%20%E2%82%B9599%20chahiye." target="_blank">WhatsApp Order</a>
-</div>
+  <div class="card">
+   <div class="photo">
+    <img src="file_0000000036408211980322d122d080c5.png" alt="Boy's Oversize T-Shirt">
+   </div>
+   <div class="details">
+    <h3>Boy's Oversize T-Shirt</h3>
+    <p>Stylish Oversize Collection</p>
+    <div class="price">₹329</div>
+    <a class="order" href="https://wa.me/919693036797?text=Mujhe%20Boy%27s%20Oversize%20T-Shirt%20%E2%82%B9329%20chahiye." target="_blank">ORDER ON WHATSAPP</a>
+   </div>
+  </div>
 
-</div>
+  <div class="card">
+   <div class="photo">
+    <img src="IMG_20260614_173915.JPG" alt="Boy's Shirt">
+   </div>
+   <div class="details">
+    <h3>Boy's Shirt</h3>
+    <p>Stylish Boy's Shirt</p>
+    <div class="price">₹349</div>
+    <a class="order" href="https://wa.me/919693036797?text=Namaste%2C%20mujhe%20Boy%27s%20Shirt%20%E2%82%B9349%20chahiye." target="_blank">ORDER ON WHATSAPP</a>
+   </div>
+  </div>
+
+  <div class="card">
+   <div class="photo">
+    <img src="file_00000000f90071fdb7630b1fe6214ca4.png" alt="Boy's Jeans">
+   </div>
+   <div class="details">
+    <h3>Boy's Jeans</h3>
+    <p>Stylish Jeans & Pants</p>
+    <div class="price">₹299</div>
+    <a class="order" href="https://wa.me/919693036797?text=Namaste%2C%20mujhe%20Boy%27s%20Jeans%20%E2%82%B9299%20chahiye." target="_blank">ORDER ON WHATSAPP</a>
+   </div>
+  </div>
+
+  <div class="card">
+   <div class="photo">
+    <img src="file_0000000038748211890152864962459d.png" alt="Woman Saree">
+   </div>
+   <div class="details">
+    <h3>Woman Saree</h3>
+    <p>Beautiful Woman Saree</p>
+    <div class="price">₹599</div>
+    <a class="order" href="https://wa.me/919693036797?text=Namaste%2C%20mujhe%20Woman%20Saree%20%E2%82%B9599%20chahiye." target="_blank">ORDER ON WHATSAPP</a>
+   </div>
+  </div>
+
+ </div>
 </section>
 
-<section>
-<h2>About Us</h2>
-<div class="about">
-<p><b>C.P.S Fashion Hub</b> में आपको अलग-अलग तरह के कपड़ों की fashion available collection मिलेगी। Product, size और price के लिए WhatsApp पर संपर्क करें।</p>
-</div>
+<section id="about">
+ <div class="about">
+  <h2>About C.P.S Fashion Hub</h2>
+  <p><b>C.P.S Fashion Hub</b> में आपका स्वागत है। यहाँ आपको अलग-अलग तरह के कपड़ों की Fashion Collection मिलेगी। हमारा उद्देश्य है आपको शानदार Style और अच्छी Quality के कपड़े उपलब्ध कराना।</p>
+  <p>Product, Size और Price की जानकारी के लिए WhatsApp पर संपर्क करें।</p>
+ </div>
 </section>
 
-<section class="contact">
-<h2>Contact Us</h2>
-<p>📱 9693036797</p>
-<p>📍 Kalwara, Singhwara, Darbhanga, Bihar - 847104</p>
-<a class="btn" href="https://wa.me/919693036797?text=Namaste%20C.P.S%20Fashion%20Hub" target="_blank">WhatsApp करें</a>
+<section class="contact" id="contact">
+ <h2>Contact Us</h2>
+ <p>📱 9693036797</p>
+ <p>📍 Kalwara, Singhwara, Darbhanga, Bihar - 847104</p>
+ <a class="btn" href="https://wa.me/919693036797?text=Namaste%20C.P.S%20Fashion%20Hub" target="_blank">💬 WhatsApp करें</a>
 </section>
+
+<footer>
+ <p>© 2026 <span>C.P.S Fashion Hub</span></p>
+ <p>Classic Premium Style</p>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/919693036797" target="_blank">WhatsApp</a>
 
 </body>
 </html>
