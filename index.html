@@ -236,8 +236,15 @@ const address=house+", "+village+", "+city+
 ", "+district+", "+state+" - "+pincode;
 
 
-  const items=cart.map(p=>p.name+" - ₹"+p.price).join("\n");
-  const total=cart.reduce((s,p)=>s+p.price,0);
+
+const items=cart.map(p=>
+ p.name+" - ₹"+p.price+
+ "\nSize: "+p.selectedSize+
+ "\nColour: "+p.selectedColor
+).join("\n\n");
+
+const total=cart.reduce((s,p)=>s+p.price,0);
+
 
   const message="NEW ORDER - C.P.S Fashion Hub\n"+
     "Customer: "+name+"\n"+
