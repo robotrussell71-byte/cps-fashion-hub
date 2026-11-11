@@ -166,8 +166,31 @@ function checkout(){
   const mobile=prompt("Enter your mobile number:");
   if(!mobile || !mobile.trim()) return;
 
-  const address=prompt("Enter your full delivery address:");
-  if(!address || !address.trim()) return;
+
+const house=prompt("Enter House No. / Street / Locality:");
+if(!house || !house.trim()) return;
+
+const village=prompt("Enter Village / Town:");
+if(!village || !village.trim()) return;
+
+const city=prompt("Enter City:");
+if(!city || !city.trim()) return;
+
+const district=prompt("Enter District:");
+if(!district || !district.trim()) return;
+
+const state=prompt("Enter State:");
+if(!state || !state.trim()) return;
+
+const pincode=prompt("Enter 6-digit PIN Code:");
+if(!/^[0-9]{6}$/.test(pincode)) {
+  alert("Please enter a valid 6-digit PIN Code");
+  return;
+}
+
+const address=house+", "+village+", "+city+
+", "+district+", "+state+" - "+pincode;
+
 
   const items=cart.map(p=>p.name+" - ₹"+p.price).join("\n");
   const total=cart.reduce((s,p)=>s+p.price,0);
