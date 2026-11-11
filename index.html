@@ -1,374 +1,173 @@
 
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="C.P.S Fashion Hub - Premium fashion collection for boys and men. Shop stylish clothes at affordable prices.">
-<meta name="theme-color" content="#101010">
-<title>C.P.S Fashion Hub | Premium Fashion</title>
-
+<title>C.P.S Fashion Hub</title>
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
- margin:0;
- font-family:Arial,sans-serif;
- background:#f7f6f2;
- color:#171717;
-}
-header{
- background:#101010;
- color:white;
- padding:18px 15px;
- text-align:center;
- border-bottom:2px solid #c5a45b;
-}
-.logo{
- font-size:25px;
- font-weight:900;
- letter-spacing:1px;
-}
-.logo span{color:#d7b76a}
-header p{
- margin:7px 0 0;
- color:#d7b76a;
- font-size:12px;
- letter-spacing:3px;
-}
-nav{
- background:#191919;
- display:flex;
- justify-content:center;
- gap:25px;
- padding:13px 8px;
- flex-wrap:wrap;
-}
-nav a{
- color:white;
- text-decoration:none;
- font-size:13px;
- font-weight:bold;
-}
-nav a:hover{color:#d7b76a}
-.hero{
- background:linear-gradient(135deg,#101010,#29251d,#111);
- color:white;
- text-align:center;
- padding:65px 15px;
- border-bottom:4px solid #c5a45b;
-}
-.tag{
- color:#d7b76a;
- letter-spacing:4px;
- font-size:11px;
- font-weight:bold;
-}
-.hero h1{
- font-size:clamp(30px,7vw,48px);
- margin:16px 0 10px;
- line-height:1.2;
-}
-.hero h1 span{color:#d7b76a}
-.hero p{
- color:#ddd;
- font-size:15px;
- line-height:1.7;
-}
-.btn{
- display:inline-block;
- background:#d7b76a;
- color:#151515;
- text-decoration:none;
- padding:14px 23px;
- border-radius:5px;
- font-weight:bold;
- margin-top:15px;
-}
-.btn:hover{background:#f0d58f}
-.features{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:8px;
- max-width:950px;
- margin:-1px auto 0;
- padding:20px 10px;
- background:#fff;
- text-align:center;
-}
-.feature{
- font-size:12px;
- font-weight:bold;
- color:#333;
-}
-.feature span{
- display:block;
- font-size:23px;
- margin-bottom:7px;
-}
-section{
- max-width:1100px;
- margin:auto;
- padding:40px 15px;
-}
-.section-title{text-align:center;margin-bottom:28px}
-.section-title small{
- color:#ad873b;
- font-weight:bold;
- letter-spacing:3px;
-}
-.section-title h2{
- font-size:27px;
- margin:9px 0;
-}
-.section-title p{color:#777;font-size:13px}
-.products{
- display:grid;
- grid-template-columns:repeat(2,minmax(0,1fr));
- gap:13px;
-}
-.card{
- background:white;
- border:1px solid #e8e4dc;
- border-radius:9px;
- overflow:hidden;
- box-shadow:0 4px 15px rgba(0,0,0,.06);
- transition:transform .2s;
-}
-.card:hover{transform:translateY(-4px)}
-.photo{
- background:#f0efeb;
- width:100%;
- aspect-ratio:1/1;
- overflow:hidden;
-}
-.photo img{
- width:100%;
- height:100%;
- object-fit:contain;
- display:block;
-}
-.details{padding:12px 10px 14px}
-.details h3{
- font-size:14px;
- margin:3px 0 8px;
-}
-.details p{
- font-size:12px;
- color:#777;
- margin:0 0 10px;
-}
-.price{
- font-size:19px;
- font-weight:900;
- color:#a77e30;
- margin-bottom:12px;
-}
-.order{
- display:block;
- background:#171717;
- color:#d7b76a;
- text-decoration:none;
- text-align:center;
- padding:11px 5px;
- border-radius:5px;
- font-size:12px;
- font-weight:bold;
-}
-.order:hover{background:#d7b76a;color:#111}
-.about{
- background:#171717;
- color:white;
- text-align:center;
- border-radius:10px;
- padding:30px 20px;
-}
-.about h2{color:#d7b76a}
-.about p{
- color:#ddd;
- line-height:1.9;
- font-size:14px;
-}
-.contact{
- background:#101010;
- color:white;
- max-width:none;
- text-align:center;
- border-top:3px solid #c5a45b;
-}
-.contact h2{color:#d7b76a}
-.contact p{font-size:14px;line-height:1.8}
-.contact .btn{margin-bottom:10px}
-footer{
- background:#080808;
- color:#aaa;
- text-align:center;
- padding:18px 10px;
- font-size:12px;
-}
-footer span{color:#d7b76a}
-.whatsapp-float{
- position:fixed;
- right:10px;
- bottom:10px;
- z-index:10;
- background:#25D366;
- color:white;
- text-decoration:none;
- padding:7px 10px;
- border-radius:25px;
- font-weight:bold;
- box-shadow:0 3px 8px #0004;
- font-size:10px;
-footer{
- padding:18px 10px 75px;
-}
-
-}
-@media(min-width:700px){
- .products{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
- .details{padding:17px}
- .details h3{font-size:17px}
- .details p{font-size:14px}
- .order{font-size:14px}
- .photo{aspect-ratio:1/1}
-}
-.whatsapp-float{
-  position:fixed !important;
-  right:10px !important;
-  bottom:10px !important;
-  z-index:999 !important;
-  background:#25D366 !important;
-  color:white !important;
-  text-decoration:none !important;
-  padding:7px 10px !important;
-  border-radius:25px !important;
-  font-size:11px !important;
-  line-height:1.2 !important;
-  font-weight:bold !important;
-  width:auto !important;
-  height:auto !important;
-  transform:none !important;
-  box-shadow:0 2px 6px #0004 !important;
-}
-
-footer{
-  padding:18px 10px 75px;
-}
-
-
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f7f7f7;color:#222}
+header{background:#111;color:white;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo{font-size:23px;font-weight:bold;color:#f5c542}
+nav a{color:white;text-decoration:none;margin:0 9px;font-size:14px}
+.hero{background:linear-gradient(120deg,#171717,#493333);color:white;text-align:center;padding:65px 15px}
+.hero h1{font-size:36px;margin-bottom:12px}
+.hero p{margin-bottom:22px;color:#ddd}
+.btn{display:inline-block;background:#f5c542;color:#111;padding:12px 22px;border:0;border-radius:5px;text-decoration:none;font-weight:bold;cursor:pointer}
+.controls{padding:25px 5%;display:flex;gap:10px;flex-wrap:wrap}
+.controls input,.controls select{padding:12px;border:1px solid #ccc;border-radius:5px;flex:1;min-width:140px}
+.section{padding:20px 5% 45px}
+.section h2{text-align:center;margin-bottom:25px;font-size:26px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
+.card{background:white;border-radius:9px;overflow:hidden;box-shadow:0 2px 10px #00000012}
+.card img{width:100%;height:220px;object-fit:cover;background:#eee}
+.info{padding:13px}
+.info h3{font-size:16px;margin-bottom:8px}
+.price{font-weight:bold;color:#b12727;margin-bottom:12px}
+.card button{width:100%;margin-top:7px;padding:10px;border:0;border-radius:4px;cursor:pointer;font-weight:bold}
+.add{background:#111;color:white}
+.order{background:#25d366;color:white}
+.about{background:#eee;padding:35px 7%;text-align:center;line-height:1.7}
+footer{background:#111;color:white;text-align:center;padding:25px 10px;line-height:2}
+#cartCount{color:#f5c542;font-weight:bold}
+@media(max-width:600px){.hero h1{font-size:28px}nav a{margin:0 5px}.card img{height:190px}}
 </style>
 </head>
-
 <body>
 
 <header>
- <div class="logo">C.P.S <span>FASHION HUB</span></div>
- <p>CLASSIC • PREMIUM • STYLE</p>
+  <div class="logo">C.P.S Fashion Hub</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#men">Men</a>
+    <a href="#women">Women</a>
+    <a href="#contact">Contact</a>
+    <a href="#cart">Cart <span id="cartCount">0</span></a>
+  </nav>
 </header>
 
-<nav>
- <a href="#home">HOME</a>
- <a href="#collection">COLLECTION</a>
- <a href="#about">ABOUT</a>
- <a href="#contact">CONTACT</a>
-</nav>
-
-<div class="hero" id="home">
- <div class="tag">WELCOME TO OUR FASHION WORLD</div>
- <h1>अपना Style बनाएं<br><span>सबसे खास!</span></h1>
- <p>Premium Fashion • Latest Collection • Best Style</p>
- <p>आपके पसंदीदा कपड़े अब एक ही जगह।</p>
- <a class="btn" href="https://wa.me/919693036797?text=Namaste%20C.P.S%20Fashion%20Hub%2C%20mujhe%20kapdon%20ki%20jaankari%20chahiye." target="_blank">✦ SHOP NOW</a>
-</div>
-
-<div class="features">
- <div class="feature"><span>✦</span>Premium Style</div>
- <div class="feature"><span>♛</span>Quality Fashion</div>
- <div class="feature"><span>✓</span>Easy WhatsApp Order</div>
-</div>
-
-<section id="collection">
- <div class="section-title">
-  <small>OUR COLLECTION</small>
-  <h2>Latest Fashion</h2>
-  <p>अपनी पसंद का Style चुनें</p>
- </div>
-
- <div class="products">
-
-  <div class="card">
-   <div class="photo">
-    <img src="file_0000000036408211980322d122d080c5.png" alt="Boy's Oversize T-Shirt">
-   </div>
-   <div class="details">
-    <h3>Boy's Oversize T-Shirt</h3>
-    <p>Stylish Oversize Collection</p>
-    <div class="price">₹329</div>
-    <a class="order" href="https://wa.me/919693036797?text=Mujhe%20Boy%27s%20Oversize%20T-Shirt%20%E2%82%B9329%20chahiye." target="_blank">ORDER ON WHATSAPP</a>
-   </div>
-  </div>
-
-  <div class="card">
-   <div class="photo">
-    <img src="IMG_20260614_173915.JPG" alt="Boy's Shirt">
-   </div>
-   <div class="details">
-    <h3>Boy's Shirt</h3>
-    <p>Stylish Boy's Shirt</p>
-    <div class="price">₹349</div>
-    <a class="order" href="https://wa.me/919693036797?text=Namaste%2C%20mujhe%20Boy%27s%20Shirt%20%E2%82%B9349%20chahiye." target="_blank">ORDER ON WHATSAPP</a>
-   </div>
-  </div>
-
-  <div class="card">
-   <div class="photo">
-    <img src="file_00000000f90071fdb7630b1fe6214ca4.png" alt="Boy's Jeans">
-   </div>
-   <div class="details">
-    <h3>Boy's Jeans</h3>
-    <p>Stylish Jeans & Pants</p>
-    <div class="price">₹299</div>
-    <a class="order" href="https://wa.me/919693036797?text=Namaste%2C%20mujhe%20Boy%27s%20Jeans%20%E2%82%B9299%20chahiye." target="_blank">ORDER ON WHATSAPP</a>
-   </div>
-  </div>
-
-  <div class="card">
-   <div class="photo">
-    <img src="file_0000000038748211890152864962459d.png" alt="Woman Saree">
-   </div>
-   <div class="details">
-    <h3>Woman Saree</h3>
-    <p>Beautiful Woman Saree</p>
-    <div class="price">₹599</div>
-    <a class="order" href="https://wa.me/919693036797?text=Namaste%2C%20mujhe%20Woman%20Saree%20%E2%82%B9599%20chahiye." target="_blank">ORDER ON WHATSAPP</a>
-   </div>
-  </div>
-
- </div>
+<section class="hero" id="home">
+  <h1>Welcome to C.P.S Fashion Hub</h1>
+  <p>Discover Your Style. Wear Your Confidence.</p>
+  <a href="#men" class="btn">Shop Now</a>
 </section>
 
-<section id="about">
- <div class="about">
+<div class="controls">
+  <input id="search" type="text" placeholder="Search products..." oninput="renderProducts()">
+  <select id="category" onchange="renderProducts()">
+    <option value="All">All Categories</option>
+    <option value="Men">Men</option>
+    <option value="Women">Women</option>
+  </select>
+</div>
+
+<section class="section" id="men">
+  <h2>Men's Collection</h2>
+  <div class="products" id="menProducts"></div>
+</section>
+
+<section class="section" id="women">
+  <h2>Women's Collection</h2>
+  <div class="products" id="womenProducts"></div>
+</section>
+
+<section class="section" id="cart">
+  <h2>My Shopping Cart</h2>
+  <div id="cartItems">Your cart is empty.</div>
+  <h3 id="total" style="margin:15px 0">Total: ₹0</h3>
+  <button class="btn" onclick="checkout()">Order on WhatsApp</button>
+</section>
+
+<section class="about">
   <h2>About C.P.S Fashion Hub</h2>
-  <p><b>C.P.S Fashion Hub</b> में आपका स्वागत है। यहाँ आपको अलग-अलग तरह के कपड़ों की Fashion Collection मिलेगी। हमारा उद्देश्य है आपको शानदार Style और अच्छी Quality के कपड़े उपलब्ध कराना।</p>
-  <p>Product, Size और Price की जानकारी के लिए WhatsApp पर संपर्क करें।</p>
- </div>
+  <p>Welcome to C.P.S Fashion Hub. We bring you stylish and affordable fashion collections for men and women. Find your style and shop with us!</p>
 </section>
 
-<section class="contact" id="contact">
- <h2>Contact Us</h2>
- <p>📱 9693036797</p>
- <p>📍 Kalwara, Singhwara, Darbhanga, Bihar - 847104</p>
- <a class="btn" href="https://wa.me/919693036797?text=Namaste%20C.P.S%20Fashion%20Hub" target="_blank">💬 WhatsApp करें</a>
-</section>
-
-<footer>
- <p>© 2026 <span>C.P.S Fashion Hub</span></p>
- <p>Classic Premium Style</p>
+<footer id="contact">
+  <h3>C.P.S Fashion Hub</h3>
+  <p>Fashion for Everyone</p>
+  <p>Contact us for orders and support.</p>
+  <p>© 2026 C.P.S Fashion Hub. All Rights Reserved.</p>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/919693036797" target="_blank">WhatsApp</a>
+<script>
+const products = [
+ {id:1,name:"Men Casual T-Shirt",price:299,category:"Men",image:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"},
+ {id:2,name:"Men Stylish Shirt",price:499,category:"Men",image:"https://images.unsplash.com/photo-1603252109303-2751441dd157?w=600"},
+ {id:3,name:"Men Denim Jeans",price:699,category:"Men",image:"https://images.unsplash.com/photo-1542272604-787c3835535d?w=600"},
+ {id:4,name:"Women Fashion Top",price:399,category:"Women",image:"https://images.unsplash.com/photo-1551163943-3f6a855d1153?w=600"},
+ {id:5,name:"Women Stylish Dress",price:799,category:"Women",image:"https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=600"},
+ {id:6,name:"Women Casual Outfit",price:599,category:"Women",image:"https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600"}
+];
 
+let cart=[];
+
+function productCard(p){
+ return `<div class="card">
+ <img src="${p.image}" alt="${p.name}" loading="lazy">
+ <div class="info">
+ <h3>${p.name}</h3>
+ <div class="price">₹${p.price}</div>
+ <button class="add" onclick="addToCart(${p.id})">Add to Cart</button>
+ <button class="order" onclick="quickOrder(${p.id})">Order Now</button>
+ </div></div>`;
+}
+
+function renderProducts(){
+ const q=document.getElementById("search").value.toLowerCase();
+ const cat=document.getElementById("category").value;
+ const filtered=products.filter(p=>
+ p.name.toLowerCase().includes(q) &&
+ (cat==="All" || p.category===cat)
+ );
+ document.getElementById("menProducts").innerHTML=
+ filtered.filter(p=>p.category==="Men").map(productCard).join("") || "No products found.";
+ document.getElementById("womenProducts").innerHTML=
+ filtered.filter(p=>p.category==="Women").map(productCard).join("") || "No products found.";
+}
+
+function addToCart(id){
+ const p=products.find(x=>x.id===id);
+ cart.push(p);
+ updateCart();
+ alert(p.name+" added to cart!");
+}
+
+function updateCart(){
+ document.getElementById("cartCount").innerText=cart.length;
+ document.getElementById("cartItems").innerHTML=cart.length?
+ cart.map((p,i)=>`<p>${p.name} - ₹${p.price} <button onclick="removeItem(${i})">Remove</button></p>`).join("")
+ :"Your cart is empty.";
+ const total=cart.reduce((sum,p)=>sum+p.price,0);
+ document.getElementById("total").innerText="Total: ₹"+total;
+}
+
+function removeItem(i){
+ cart.splice(i,1);
+ updateCart();
+}
+
+function quickOrder(id){
+ const p=products.find(x=>x.id===id);
+ sendWhatsApp("Hello, I want to order: "+p.name+" | Price: ₹"+p.price);
+}
+
+function checkout(){
+ if(!cart.length){alert("Your cart is empty!");return;}
+ const message="Hello C.P.S Fashion Hub, I want to order:\n"+
+ cart.map(p=>p.name+" - ₹"+p.price).join("\n")+
+ "\nTotal: ₹"+cart.reduce((s,p)=>s+p.price,0);
+ sendWhatsApp(message);
+}
+
+function sendWhatsApp(message){
+ const phone="91XXXXXXXXXX";
+ if(phone.includes("X")){alert("Please add your WhatsApp number in the website code first.");return;}
+ window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(message),"_blank");
+}
+
+renderProducts();
+</script>
 </body>
 </html>
