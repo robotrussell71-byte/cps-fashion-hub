@@ -149,9 +149,24 @@ function renderProducts(){
  filtered.filter(p=>p.category==="Women").map(productCard).join("") || "No products found.";
 }
 
+
 function addToCart(id){
  const p=products.find(x=>x.id===id);
- cart.push(p);
+
+ const size=document.getElementById("size-"+id).value;
+ const color=document.getElementById("color-"+id).value;
+
+ if(!size || !color){
+   alert("Please select Size and Colour first!");
+   return;
+ }
+
+ cart.push({
+   ...p,
+   selectedSize:size,
+   selectedColor:color
+ });
+
  updateCart();
  alert(p.name+" added to cart!");
 }
