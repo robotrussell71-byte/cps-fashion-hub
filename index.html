@@ -103,16 +103,38 @@ const products = [
 
 let cart=[];
 
+
 function productCard(p){
  return `<div class="card">
  <img src="${p.image}" alt="${p.name}" loading="lazy">
  <div class="info">
  <h3>${p.name}</h3>
  <div class="price">₹${p.price}</div>
+
+ <label>Choose Size:</label>
+ <select id="size-${p.id}">
+ <option value="">Select Size</option>
+ <option value="S">S</option>
+ <option value="M">M</option>
+ <option value="L">L</option>
+ <option value="XL">XL</option>
+ <option value="XXL">XXL</option>
+ </select>
+
+ <label>Choose Colour:</label>
+ <select id="color-${p.id}">
+ <option value="">Select Colour</option>
+ <option value="Black">Black</option>
+ <option value="White">White</option>
+ <option value="Blue">Blue</option>
+ <option value="Red">Red</option>
+ </select>
+
  <button class="add" onclick="addToCart(${p.id})">Add to Cart</button>
  <button class="order" onclick="quickOrder(${p.id})">Order Now</button>
  </div></div>`;
 }
+
 
 function renderProducts(){
  const q=document.getElementById("search").value.toLowerCase();
