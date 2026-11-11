@@ -258,6 +258,7 @@ const total=cart.reduce((s,p)=>s+p.price,0);
 
 
 function sendWhatsApp(message){
+  alert("Thank you! Your order has been placed successfully.");
  const phone="919693036797";
  if(phone.includes("X")){alert("Please add your WhatsApp number in the website code first.");return;}
  window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(message),"_blank");
