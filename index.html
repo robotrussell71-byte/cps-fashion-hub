@@ -171,14 +171,21 @@ function addToCart(id){
  alert(p.name+" added to cart!");
 }
 
+
 function updateCart(){
  document.getElementById("cartCount").innerText=cart.length;
- document.getElementById("cartItems").innerHTML=cart.length?
- cart.map((p,i)=>`<p>${p.name} - ₹${p.price} <button onclick="removeItem(${i})">Remove</button></p>`).join("")
- :"Your cart is empty.";
+
+ document.getElementById("cartItems").innerHTML=cart.map((p,i)=>
+ `<p>${p.name} - ₹${p.price}
+ <br>Size: ${p.selectedSize || "N/A"}
+ <br>Colour: ${p.selectedColor || "N/A"}
+ <button onclick="removeItem(${i})">Remove</button></p>`
+ ).join("") || "Your cart is empty.";
+
  const total=cart.reduce((sum,p)=>sum+p.price,0);
- document.getElementById("total").innerText="Total: ₹"+total;
+ document.getElementById("total").innerText="₹"+total;
 }
+
 
 function removeItem(i){
  cart.splice(i,1);
