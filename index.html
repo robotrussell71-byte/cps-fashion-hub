@@ -153,13 +153,35 @@ function quickOrder(id){
  sendWhatsApp("Hello, I want to order: "+p.name+" | Price: ₹"+p.price);
 }
 
+
 function checkout(){
- if(!cart.length){alert("Your cart is empty!");return;}
- const message="Hello C.P.S Fashion Hub, I want to order:\n"+
- cart.map(p=>p.name+" - ₹"+p.price).join("\n")+
- "\nTotal: ₹"+cart.reduce((s,p)=>s+p.price,0);
- sendWhatsApp(message);
+  if(!cart.length){
+    alert("Your cart is empty");
+    return;
+  }
+
+  const name=prompt("Enter your full name:");
+  if(!name || !name.trim()) return;
+
+  const mobile=prompt("Enter your mobile number:");
+  if(!mobile || !mobile.trim()) return;
+
+  const address=prompt("Enter your full delivery address:");
+  if(!address || !address.trim()) return;
+
+  const items=cart.map(p=>p.name+" - ₹"+p.price).join("\n");
+  const total=cart.reduce((s,p)=>s+p.price,0);
+
+  const message="NEW ORDER - C.P.S Fashion Hub\n"+
+    "Customer: "+name+"\n"+
+    "Mobile: "+mobile+"\n"+
+    "Address: "+address+"\n"+
+    "Products:\n"+items+
+    "\nTotal: ₹"+total;
+
+  sendWhatsApp(message);
 }
+
 
 function sendWhatsApp(message){
  const phone="919693036797";
